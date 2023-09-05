@@ -4,7 +4,9 @@
 	"name": "C++",
 	"build": {
 		"dockerfile": "Dockerfile"
-	}
+	},
+
+	"postStartCommand": "/tmp/configure-mbed.sh"
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 

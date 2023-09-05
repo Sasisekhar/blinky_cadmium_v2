@@ -1,4 +1,3 @@
-
 FROM mcr.microsoft.com/devcontainers/cpp:1-ubuntu-22.04
 
 ARG REINSTALL_CMAKE_VERSION_FROM_SOURCE="none"
@@ -11,11 +10,8 @@ RUN if [ "${REINSTALL_CMAKE_VERSION_FROM_SOURCE}" != "none" ]; then \
     fi \
     && rm -f /tmp/reinstall-cmake.sh
 
-COPY ./configure-mbed.sh /tmp/ 
+COPY ./configure-mbed.sh /tmp/
 
-RUN chmod +x /tmp/configure-mbed.sh
-
-RUN ./tmp/configure-mbed.sh
 # [Optional] Uncomment this section to install additional vcpkg ports.
 # RUN su vscode -c "${VCPKG_ROOT}/vcpkg install <your-port-name-here>"
 
